@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTreeTableView fx:id="appointmentsTable" layoutX="34.0" layoutY="124.0" prefHeight="220.0" prefWidth="714.0" styleClass="appointmentTable" stylesheets="@../stylesheet.css">
+         <columns>
+            <TreeTableColumn fx:id="nameColumn" prefWidth="220.0" styleClass="appointmentColumn" text="Nume pacient" />
+            <TreeTableColumn fx:id="dateColumn" prefWidth="140.0" styleClass="appointmentColumn" text="Data" />
+            <TreeTableColumn fx:id="timeColumn" prefWidth="174.0" styleClass="appointmentColumn" text="Ora" />
+            <TreeTableColumn fx:id="procedureColumn" prefWidth="166.0" styleClass="appointmentColumn" text="Intervenția solicitată" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXDatePicker fx:id="findByEndDateInput" layoutX="614.0" layoutY="83.0" prefHeight="31.0" prefWidth="134.0" promptText="Pâna la" />
+      <JFXDatePicker fx:id="findByStartDateInput" layoutX="436.0" layoutY="83.0" prefHeight="31.0" prefWidth="134.0" promptText="Incepând din" />
+      <JFXTextField fx:id="findByNameInput" layoutX="66.0" layoutY="83.0" promptText="Caută după pacient" />
+      <AnchorPane layoutX="34.0" layoutY="366.0" prefHeight="186.0" prefWidth="510.0" style="-fx-background-color: #fff; -fx-border-width: 1px; -fx-border-color: #bdc3c7;">
+         <children>
+            <Label layoutX="23.0" layoutY="23.0" text="Nume" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="23.0" layoutY="100.0" text="Prenume" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="188.0" layoutY="23.0" text="Data" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="388.0" layoutY="23.0" text="De la ora" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="388.0" layoutY="96.0" text="Pana la ora" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <JFXTimePicker fx:id="endTimeInput" layoutX="388.0" layoutY="126.0" prefHeight="31.0" prefWidth="111.0" />
+            <JFXTimePicker fx:id="startTimeInput" layoutX="388.0" layoutY="44.0" prefHeight="31.0" prefWidth="111.0" />
+            <JFXDatePicker fx:id="dateInput" layoutX="188.0" layoutY="44.0" prefHeight="31.0" prefWidth="111.0" />
+            <Label layoutX="188.0" layoutY="96.0" text="Intervenția solicitată" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <JFXComboBox fx:id="procedureInput" layoutX="188.0" layoutY="126.0" prefHeight="31.0" prefWidth="111.0" />
+            <JFXTextField fx:id="lastNameInput" layoutX="23.0" layoutY="44.0" prefHeight="31.0" prefWidth="101.0" />
+            <JFXTextField fx:id="firstNameInput" layoutX="23.0" layoutY="126.0" prefHeight="31.0" prefWidth="101.0" />
+            <Separator layoutX="151.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="19.0" />
+            <Separator layoutX="348.0" layoutY="7.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="19.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="handleAdd" layoutX="592.0" layoutY="366.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #16a085; -fx-text-fill: #fff;" text="Adaugă" />
+      <JFXButton fx:id="handleEdit" layoutX="592.0" layoutY="444.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #e67e22; -fx-text-fill: #fff;" text="Editează" />
+      <JFXButton fx:id="handleDelete" layoutX="592.0" layoutY="521.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #c0392b; -fx-text-fill: #fff;" text="Șterge" />
+      <AnchorPane layoutY="-1.0" prefHeight="60.0" prefWidth="782.0" style="-fx-background-color: #2ecc71;">
+         <children>
+            <Label layoutX="292.0" layoutY="17.0" text="Gestionarea programărilor" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_MD" layoutX="265.0" layoutY="38.0" size="25" />
+         </children>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" radius="4.75" width="0.0" />
+         </effect>
+      </AnchorPane>
+      <Label fx:id="errorMessage" layoutX="34.0" layoutY="565.0" prefHeight="21.0" prefWidth="510.0" />
+      <FontAwesomeIconView fill="#2c3e50" glyphName="SEARCH" layoutX="40.0" layoutY="107.0" size="20" text="" />
+   </children>
+</AnchorPane>

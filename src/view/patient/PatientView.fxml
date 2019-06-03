@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTreeTableView fx:id="patientsTable" layoutX="20.0" layoutY="146.0" prefHeight="437.0" prefWidth="300.0" styleClass="patientsTable" stylesheets="@../stylesheet.css">
+         <columns>
+            <TreeTableColumn fx:id="firstNameColumn" prefWidth="149.0" styleClass="patientColumn" text="Nume" />
+            <TreeTableColumn fx:id="lastNameColumn" prefWidth="146.0" styleClass="patientColumn" text="Prenume" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXTextField fx:id="searchPatientField" layoutX="61.0" layoutY="96.0" onAction="#searchPatient" prefHeight="31.0" prefWidth="217.0" promptText="Caută pacient" />
+      <JFXButton layoutX="345.0" layoutY="504.0" onAction="#handleAddPatient" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #16a085; -fx-text-fill: #fff;" styleClass="add-button" stylesheets="@../stylesheet.css" text="Adaugă" />
+      <JFXButton layoutX="496.0" layoutY="504.0" onAction="#handleEditPatient" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #e67e22; -fx-text-fill: #fff;" styleClass="edit-button" stylesheets="@../stylesheet.css" text="Editează" />
+      <JFXButton layoutX="646.0" layoutY="504.0" onAction="#handleDeletePatient" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #c0392b; -fx-text-fill: #fff;" styleClass="delete-button" stylesheets="@../stylesheet.css" text="Șterge" />
+      <AnchorPane layoutX="345.0" layoutY="196.0" prefHeight="280.0" prefWidth="403.0" style="-fx-background-color: #FFF; -fx-border-width: 1px; -fx-border-color: #bdc3c7;">
+         <children>
+            <JFXTextField fx:id="patientFirstName" layoutX="118.0" layoutY="33.0" prefHeight="31.0" prefWidth="150.0" />
+            <JFXTextField fx:id="patientLastName" layoutX="118.0" layoutY="95.0" prefHeight="31.0" prefWidth="150.0" />
+            <FontAwesomeIconView fill="#16a085" glyphName="USER" layoutX="42.0" layoutY="76.0" size="50" wrappingWidth="40.7142858505249" />
+            <JFXTextField fx:id="patientAge" layoutX="118.0" layoutY="162.0" prefHeight="31.0" prefWidth="150.0" />
+            <JFXTextField fx:id="patientPhone" layoutX="118.0" layoutY="230.0" prefHeight="31.0" prefWidth="150.0" />
+            <Label layoutX="119.0" layoutY="14.0" text="Nume" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="118.0" layoutY="74.0" text="Prenume" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="118.0" layoutY="141.0" text="Varstă" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="118.0" layoutY="209.0" text="Telefon" textFill="#7f8c8d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="352.0" layoutY="154.0" prefHeight="30.0" prefWidth="265.0" text="Adauga / Editează / Șterge" textFill="#2c3e50e3">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="#2c3e50" glyphName="SEARCH" layoutX="33.0" layoutY="122.0" size="20" />
+      <Label fx:id="errorMessage" layoutX="345.0" layoutY="545.0" prefHeight="20.0" prefWidth="403.0" textFill="#c0392b" />
+      <AnchorPane layoutY="-1.0" prefHeight="60.0" prefWidth="782.0" style="-fx-background-color: #2ecc71;">
+         <children>
+            <Label layoutX="300.0" layoutY="17.0" prefHeight="27.0" prefWidth="210.0" text="Gestionarea paciențiilor" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_MD" layoutX="273.0" layoutY="38.0" size="25" />
+         </children>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="11.47" radius="2.3675" width="0.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

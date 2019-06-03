@@ -1,0 +1,66 @@
+
+.side-menu-button:hover {
+    -fx-background-color : #229955;
+}
+
+.side-menu-button:focused {
+    -fx-background-color: #52be80;
+}
+
+.login-button:hover {
+    -fx-background-color : #229955;
+}
+
+/*Appointment View*/
+
+.todaysAppointmentTable .column-header-background {
+    -fx-background-color : #1abc9c;
+}
+
+.todaysAppointmentTable .column-header .label {
+    -fx-text-fill: #fff;
+}
+
+.todaysAppointmentTable .tableCol {
+    -fx-alignment: center;
+}
+
+/*Patients View*/
+
+.patientsTable .column-header-background {
+    -fx-background-color : #1abc9c;
+}
+
+.patientsTable .column-header .label {
+    -fx-text-fill: #fff;
+}
+
+.patientsTable .patientColumn {
+    -fx-alignment: center;
+}
+
+.add-button:hover {
+    -fx-background-color: #138a72;
+}
+
+.edit-button:hover {
+    -fx-background-color: #d67118;
+}
+
+.delete-button:hover {
+    -fx-background-color: #ab3326;
+}
+
+/* Appointment View*/
+.appointmentTable .column-header-background {
+    -fx-background-color : #1abc9c;
+}
+
+.appointmentTable .column-header .label {
+    -fx-text-fill: #fff;
+}
+
+.appointmentTable .appointmentColumn {
+    -fx-alignment: center;
+}
+

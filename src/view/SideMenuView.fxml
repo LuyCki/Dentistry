@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #27ae60;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icon_02-360x360.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="doctorName" text="Dr. Ciolac Lucian" textFill="WHITE">
+               <padding>
+                  <Insets bottom="25.0" top="5.0" />
+               </padding>
+            </Label>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onMouseClicked="#toHome" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Prezentare generală" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onMouseClicked="#toAppointments" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Programări" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onMouseClicked="#toPatients" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Pacienți" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Prețuri" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Statistici" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALCULATOR" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" onMouseClicked="#handleLogOut" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Deconectare" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="25" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="sceneView" layoutX="300.0" prefHeight="600.0" prefWidth="782.0" />
+   </children>
+</AnchorPane>
