@@ -26,7 +26,7 @@
       </JFXTreeTableView>
       <JFXDatePicker fx:id="findByEndDateInput" layoutX="614.0" layoutY="83.0" prefHeight="31.0" prefWidth="134.0" promptText="Pâna la" />
       <JFXDatePicker fx:id="findByStartDateInput" layoutX="436.0" layoutY="83.0" prefHeight="31.0" prefWidth="134.0" promptText="Incepând din" />
-      <JFXTextField fx:id="findByNameInput" layoutX="66.0" layoutY="83.0" promptText="Caută după pacient" />
+      <JFXTextField fx:id="findByNameInput" layoutX="66.0" layoutY="83.0" onAction="#searchAppointment" promptText="Caută după pacient" />
       <AnchorPane layoutX="34.0" layoutY="366.0" prefHeight="186.0" prefWidth="510.0" style="-fx-background-color: #fff; -fx-border-width: 1px; -fx-border-color: #bdc3c7;">
          <children>
             <Label layoutX="23.0" layoutY="23.0" text="Nume" textFill="#7f8c8d">
@@ -63,9 +63,9 @@
             <Separator layoutX="348.0" layoutY="7.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="19.0" />
          </children>
       </AnchorPane>
-      <JFXButton fx:id="handleAdd" layoutX="592.0" layoutY="366.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #16a085; -fx-text-fill: #fff;" text="Adaugă" />
-      <JFXButton fx:id="handleEdit" layoutX="592.0" layoutY="444.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #e67e22; -fx-text-fill: #fff;" text="Editează" />
-      <JFXButton fx:id="handleDelete" layoutX="592.0" layoutY="521.0" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #c0392b; -fx-text-fill: #fff;" text="Șterge" />
+      <JFXButton fx:id="handleAdd" layoutX="592.0" layoutY="366.0" onAction="#handleAddAppointment" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #16a085; -fx-text-fill: #fff;" text="Adaugă" />
+      <JFXButton fx:id="handleEdit" layoutX="592.0" layoutY="444.0" onAction="#handleEditAppointment" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #e67e22; -fx-text-fill: #fff;" text="Editează" />
+      <JFXButton fx:id="handleDelete" layoutX="592.0" layoutY="521.0" onAction="#handleDeleteAppointment" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #c0392b; -fx-text-fill: #fff;" text="Șterge" />
       <AnchorPane layoutY="-1.0" prefHeight="60.0" prefWidth="782.0" style="-fx-background-color: #2ecc71;">
          <children>
             <Label layoutX="292.0" layoutY="17.0" text="Gestionarea programărilor" textFill="WHITE">
@@ -81,5 +81,6 @@
       </AnchorPane>
       <Label fx:id="errorMessage" layoutX="34.0" layoutY="565.0" prefHeight="21.0" prefWidth="510.0" />
       <FontAwesomeIconView fill="#2c3e50" glyphName="SEARCH" layoutX="40.0" layoutY="107.0" size="20" text="" />
+      <JFXComboBox fx:id="choosePacient" focusColor="#16a085" layoutX="593.0" layoutY="397.0" prefHeight="31.0" prefWidth="134.0" promptText="Alege pacient" unFocusColor="#16a085" />
    </children>
 </AnchorPane>

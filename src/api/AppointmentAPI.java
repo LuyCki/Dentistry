@@ -53,7 +53,7 @@ public class AppointmentAPI {
     }
 
     public List<Appointment> getAllApptOrderByDateAndTime(int doctorId) {
-        TypedQuery<Appointment> query = DatabaseUtil.getDb().getEntityManager().createQuery("SELECT u FROM Appointment u WHERE u.doctor.idDoctor = :doctorId ORDER BY u.date, u.startTime", Appointment.class);
+        TypedQuery<Appointment> query = DatabaseUtil.getDb().getEntityManager().createQuery("SELECT u FROM Appointment u WHERE u.doctor.idDoctor = :doctorId AND u.isDeleted = 0 ORDER BY u.date, u.startTime", Appointment.class);
         query.setParameter("doctorId", doctorId);
         return query.getResultList();
     }

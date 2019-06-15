@@ -42,4 +42,11 @@ public class ProcedureAPI {
     public void updatePrice (Procedure oldProcedure, Procedure newPriceProcedure){
 
     }
+
+    public List<Procedure> getAllProcedures() {
+        TypedQuery<Procedure> query = DatabaseUtil.getDb().getEntityManager().createQuery("SELECT u.name FROM Procedure u", Procedure.class);
+        return query.getResultList();
+    }
+
+
 }
