@@ -78,7 +78,7 @@
                   <Insets />
                </VBox.margin>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Prețuri" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="50.0" onMouseClicked="#toProcedures" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Prețuri" textFill="WHITE">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="25" />
                </graphic>
@@ -95,7 +95,7 @@
                   <Insets />
                </VBox.margin>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="50.0" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Statistici" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="22.0" prefHeight="50.0" onMouseClicked="#toStatistics" prefWidth="305.0" styleClass="side-menu-button" stylesheets="@stylesheet.css" text="Statistici" textFill="WHITE">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="CALCULATOR" size="25" />
                </graphic>

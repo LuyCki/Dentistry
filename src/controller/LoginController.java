@@ -49,11 +49,11 @@ public class LoginController implements Initializable {
                 Parent doctorView = loader.load();
                 scene.changeScene(doctorView, mouseEvent);
 
-                invalidLogin.setText("Loading...");
+                invalidLogin.setText("Se incarca...");
             } else if(requestUser.getRole().getNameRole().equals("ADMIN")) {
-                invalidLogin.setText("Loading..."); }
+                invalidLogin.setText("Se incarca..."); }
         } else {
-            invalidLogin.setText("Invalid login, please try again.");
+            invalidLogin.setText("Conectarea nevalidă, încercați din nou.");
         }
     }
 

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import model.Procedure;
 import model.User;
 import util.Utils;
 import java.io.IOException;
@@ -85,6 +86,34 @@ public class SideMenuController implements Initializable {
             e.printStackTrace();
         }
         changeMenu(patient);
+    }
+
+    @FXML
+    private void toProcedures() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/procedure/ProcedureView.fxml"));
+        ProcedureController procedureController = new ProcedureController(requestUser.getDoctor().getIdDoctor());
+        loader.setController(procedureController);
+        Parent procedure = null;
+        try {
+            procedure = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        changeMenu(procedure);
+    }
+
+    @FXML
+    private void toStatistics() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/statistics/StatisticsView.fxml"));
+        StatisticsController procedureController = new StatisticsController(requestUser.getDoctor().getIdDoctor());
+        loader.setController(procedureController);
+        Parent statistics = null;
+        try {
+            statistics = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        changeMenu(statistics);
     }
 
 }

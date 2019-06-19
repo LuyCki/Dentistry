@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTreeTableView fx:id="proceduresTable" layoutX="190.0" layoutY="108.0" prefHeight="437.0" prefWidth="403.0" styleClass="patientsTable" stylesheets="@../stylesheet.css">
+         <columns>
+            <TreeTableColumn fx:id="procedureColumn" prefWidth="194.0" styleClass="patientColumn" text="Procedura" />
+            <TreeTableColumn fx:id="priceColumn" prefWidth="201.0" styleClass="patientColumn" text="Pret" />
+         </columns>
+      </JFXTreeTableView>
+      <Label fx:id="errorMessage" layoutX="345.0" layoutY="545.0" prefHeight="20.0" prefWidth="403.0" textFill="#c0392b" />
+      <AnchorPane layoutY="-1.0" prefHeight="60.0" prefWidth="782.0" style="-fx-background-color: #2ecc71;">
+         <children>
+            <Label layoutX="359.0" layoutY="17.0" prefHeight="27.0" prefWidth="92.0" text="Proceduri" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_MD" layoutX="332.0" layoutY="38.0" size="25" />
+         </children>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="11.47" radius="2.3675" width="0.0" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

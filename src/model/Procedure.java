@@ -1,5 +1,7 @@
 package model;
 
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
@@ -8,7 +10,7 @@ import java.util.List;
 @Entity
 @Table(name="procedures")
 @NamedQuery(name="Procedure.findAll", query="SELECT p FROM Procedure p")
-public class Procedure implements Serializable {
+public class Procedure extends RecursiveTreeObject<Procedure> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id

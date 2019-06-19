@@ -13,7 +13,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.util.StringConverter;
@@ -21,17 +20,13 @@ import model.Appointment;
 import model.Doctor;
 import model.Patient;
 import model.Procedure;
-import org.eclipse.persistence.jpa.jpql.parser.DateTime;
 
-import javax.print.Doc;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -268,7 +263,7 @@ public class AppointmentController implements Initializable {
             lastNameInput.setText(appointment.getValue().getPatient().getLastName());
             dateInput.setValue(new Date(appointment.getValue().getDate().getTime()).toLocalDate());
             startTimeInput.setValue(appointment.getValue().getStartTime().toLocalTime());
-            endTimeInput.setValue(appointment.getValue().getStartTime().toLocalTime());
+            endTimeInput.setValue(appointment.getValue().getEndTime().toLocalTime());
             procedureInput.setValue(appointment.getValue().getProcedure());
         } else {
             firstNameInput.setText("");
